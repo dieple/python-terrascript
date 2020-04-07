@@ -1,0 +1,124 @@
+dataops-staging:
+  module:
+    inputs:
+      bastion_name: ""
+      allowed_cidr_blocks: ["80.168.47.127/32", "193.105.212.250/32"]
+      key_name: ""
+      instance_type: "t3.micro"
+      ssh_user: "ec2-user"
+      user_data: []
+      volume_size: "50"
+      public_key_data: ""
+      max_size: "1"
+      min_size: "1"
+      desired_capacity: "1"
+      wait_for_capacity_timeout: "10m"
+      cooldown: "300"
+      health_check_grace_period: "300"
+      scale_down_cron: "0 23 * * *"
+      scale_up_cron: "0 8 * * MON-FRI"
+      scale_down_min_size: "1"
+      scale_down_desired_capacity: "1"
+      vpc_id: ""
+      public_subnets: []
+      zone_id: "Z05346763F2I4Z3JOHTEC"
+      tags: {}
+    outputs:
+      - "private_ip"
+      - "public_ip"
+      - "role"
+      - "security_group_id"
+      - "ssh_user"
+dataops-prod:
+  module:
+    inputs:
+      bastion_name: ""
+      allowed_cidr_blocks: ["80.168.47.127/32", "193.105.212.250/32"]
+      key_name: ""
+      instance_type: "t3.micro"
+      ssh_user: "ec2-user"
+      user_data: []
+      volume_size: "50"
+      public_key_data: ""
+      max_size: "1"
+      min_size: "1"
+      desired_capacity: "1"
+      wait_for_capacity_timeout: "10m"
+      cooldown: "300"
+      health_check_grace_period: "300"
+      scale_down_cron: "0 23 * * *"
+      scale_up_cron: "0 8 * * MON-FRI"
+      scale_down_min_size: "1"
+      scale_down_desired_capacity: "1"
+      vpc_id: ""
+      public_subnets: []
+      zone_id: "Z05346763F2I4Z3JOHTEC"
+      tags: {}
+    outputs:
+      - "private_ip"
+      - "public_ip"
+      - "role"
+      - "security_group_id"
+      - "ssh_user"
+dataops-dev:
+  module:
+    inputs:
+      bastion_name: ""
+      allowed_cidr_blocks: ["80.168.47.127/32", "193.105.212.250/32"]
+      key_name: ""
+      instance_type: "t3.micro"
+      ssh_user: "ec2-user"
+      user_data: []
+      volume_size: "50"
+      public_key_data: ""
+      max_size: "1"
+      min_size: "1"
+      desired_capacity: "1"
+      wait_for_capacity_timeout: "10m"
+      cooldown: "300"
+      health_check_grace_period: "300"
+      scale_down_cron: "0 23 * * *"
+      scale_up_cron: "0 8 * * MON-FRI"
+      scale_down_min_size: "1"
+      scale_down_desired_capacity: "1"
+      vpc_id: ""
+      public_subnets: []
+      zone_id: "Z05346763F2I4Z3JOHTEC"
+      tags: {}
+    outputs:
+      - "private_ip"
+      - "public_ip"
+      - "role"
+      - "security_group_id"
+      - "ssh_user"
+cloudops-dev:
+  module:
+    inputs:
+      bastion_name: ""
+      allowed_cidr_blocks: ["80.168.47.127/32", "193.105.212.250/32"]
+      key_name: ""
+      instance_type: "t3.micro"
+      ssh_user: "ec2-user"
+      user_data: []
+      volume_size: "50"
+      public_key_data: ""
+      max_size: "1"
+      min_size: "1"
+      desired_capacity: "1"
+      wait_for_capacity_timeout: "10m"
+      cooldown: "300"
+      health_check_grace_period: "300"
+      scale_down_cron: "0 23 * * *"
+      scale_up_cron: "0 8 * * MON-FRI"
+      scale_down_min_size: "1"
+      scale_down_desired_capacity: "1"
+      vpc_id: ""
+      public_subnets: []
+      zone_id: "Z05346763F2I4Z3JOHTEC"
+      tags: {}
+    outputs:
+      - "private_ip"
+      - "public_ip"
+      - "role"
+      - "security_group_id"
+      - "ssh_user"

@@ -1,0 +1,93 @@
+workspace:
+  dataops-dev:
+    account_id: 1111111111111
+    account: "DataOps Dev account"
+    workspace_iam_role: "arn:aws:iam::111111111111:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "dataops-dev-tf-infra-state"
+    dynamodb: "dataops-dev-tf-infra-state-lock"
+    environment: "dev"
+  dataops-staging:
+    account_id: 2222222222222
+    account: "DataOps Staging account"
+    workspace_iam_role: "arn:aws:iam::222222222222:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "dataops-staging-tf-infra-state"
+    dynamodb: "dataops-staging-tf-infra-state-lock"
+    environment: "staging"
+  dataops-prod:
+    account_id: 3333333333333
+    account: "DataOps Staging account"
+    workspace_iam_role: "arn:aws:iam::3333333333333:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "dataops-prod-tf-infra-state"
+    dynamodb: "dataops-prod-tf-infra-state-lock"
+    environment: "prod"
+  cloudops-dev:
+    account_id: 4444444444444
+    account: "CloudOps Dev account"
+    workspace_iam_role: "arn:aws:iam::4444444444444:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "cloudops-dev-tf-infra-state"
+    dynamodb: "cloudops-dev-tf-infra-state-lock"
+    environment: "dev"
+  cloudops-staging:
+    account_id: 5555555555555
+    account: "CloudOps Staging account"
+    workspace_iam_role: "arn:aws:iam::5555555555555:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "cloudops-staging-tf-infra-state"
+    dynamodb: "cloudops-staging-tf-infra-state-lock"
+    environment: "staging"
+  cloudops-prod:
+    account_id: 6666666666666
+    account: "CloudOps Prod account"
+    workspace_iam_role: "arn:aws:iam::6666666666666:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "cloudops-prod-tf-infra-state"
+    dynamodb: "cloudops-prod-tf-infra-state-lock"
+    environment: "prod"
+  platform-dev:
+    account_id: 7777777777777
+    account: "Platform Dev account"
+    workspace_iam_role: "arn:aws:iam::7777777777777:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "platform-dev-tf-infra-state"
+    dynamodb: "platform-dev-tf-infra-state-lock"
+    environment: "dev"
+  platform-staging:
+    account_id: 8888888888888
+    account: "Platform Staging account"
+    workspace_iam_role: "arn:aws:iam::8888888888888:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "platform-staging-tf-infra-state"
+    dynamodb: "platform-staging-tf-infra-state-lock"
+    environment: "staging"
+  platform-prod:
+    account_id: 9999999999999
+    account: "Platform Prod account"
+    workspace_iam_role: "arn:aws:iam::9999999999999:role/administrator"
+    share_r53_iam_role: "arn:aws:iam::000000000000:role/administrator"
+    region: "eu-west-1"
+    bucket_region: "eu-west-1"
+    bucket: "platform-prod-tf-infra-state"
+    dynamodb: "platform-prod-tf-infra-state-lock"
+    environment: "prod"
+
+

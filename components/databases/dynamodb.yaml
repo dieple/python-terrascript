@@ -1,0 +1,90 @@
+platform_testing:
+  module:
+    inputs:
+      name: ""
+      hash_key: "Path"
+      range_key: "Key"
+      enable_autoscaler: false
+      dynamodb_attributes: []
+      local_secondary_index_map: []
+      global_secondary_index_map: []
+      autoscale_min_read_capacity: 1
+      autoscale_min_write_capacity: 1
+      tags: {}
+    outputs:
+      - "table_name"
+dataops_staging:
+  module:
+    inputs:
+      name: ""
+      hash_key: "Path"
+      range_key: "Key"
+      enable_autoscaler: false
+      dynamodb_attributes: []
+      local_secondary_index_map: []
+      global_secondary_index_map: []
+      autoscale_min_read_capacity: 1
+      autoscale_min_write_capacity: 1
+      tags: {}
+    outputs:
+      - "table_name"
+dataops_dev:
+  module:
+    inputs:
+      name: ""
+      hash_key: "Path"
+      range_key: "Key"
+      enable_autoscaler: false
+      dynamodb_attributes: []
+      local_secondary_index_map: []
+      global_secondary_index_map: []
+      autoscale_min_read_capacity: 1
+      autoscale_min_write_capacity: 1
+      tags: {}
+    outputs:
+      - "table_name"
+cloudops_staging:
+  module:
+    inputs:
+      name: ""
+      hash_key: "Path"
+      range_key: "Key"
+      enable_autoscaler: false
+      dynamodb_attributes: []
+      local_secondary_index_map: []
+      global_secondary_index_map: []
+      autoscale_min_read_capacity: 1
+      autoscale_min_write_capacity: 1
+      tags: {}
+    outputs:
+      - "table_name"
+cloudops_prod:
+  module:
+    inputs:
+      name: ""
+      hash_key: "Path"
+      range_key: "Key"
+      enable_autoscaler: false
+      dynamodb_attributes: []
+      local_secondary_index_map: []
+      global_secondary_index_map: []
+      autoscale_min_read_capacity: 1
+      autoscale_min_write_capacity: 1
+      tags: {}
+    outputs:
+      - "table_name"
+cloudops_dev:
+  module:
+    inputs:
+      name: ""
+      hash_key: "Path"
+      range_key: "Key"
+      enable_autoscaler: false
+      dynamodb_attributes: []
+      local_secondary_index_map: []
+      global_secondary_index_map: []
+      autoscale_min_read_capacity: 1
+      autoscale_min_write_capacity: 1
+      tags: {}
+    outputs:
+      - "table_name"

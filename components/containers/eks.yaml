@@ -1,0 +1,189 @@
+dataops-dev:
+  module:
+    inputs:
+      worker_disk_size: 50
+      worker_ami_type: "AL2_x86_64"
+      enable_irsa: true
+      cluster_enabled_log_types: []
+      cluster_name: ""
+#      map_roles: []
+#      vpc_id: ""
+#      subnets: []
+#      bucket: ""
+#      bucket_region: ""
+#      dynamodb: ""
+#      workspace: ""
+      tags: {}
+      node_groups: {
+        group1: {
+          desired_capacity: 3,
+          max_capacity: 10,
+          min_capacity: 1,
+          instance_type: "t2.medium",
+          ami_release_version: "1.14.9-20200228",
+          k8s_labels: {
+            Environment: "tst2"
+          }
+        },
+        group2: {
+          desired_capacity: 3,
+          max_capacity: 10,
+          min_capacity: 1,
+          instance_type: "t2.large",
+          ami_release_version: "1.14.9-20200228",
+          k8s_labels: {
+            Environment: "tst2"
+          }
+        }
+      }
+    outputs:
+      - "cluster_arn"
+      - "cluster_certificate_authority_data"
+      - "cluster_endpoint"
+      - "cluster_iam_role_arn"
+      - "cluster_iam_role_name"
+      - "cluster_id"
+      - "cluster_security_group_id"
+      - "cluster_version"
+      - "config_map_aws_auth"
+      - "kubeconfig"
+      - "kubeconfig_filename"
+      - "node_groups"
+      - "worker_iam_instance_profile_arns"
+      - "worker_iam_role_arn"
+      - "worker_iam_role_name"
+      - "worker_security_group_id"
+      - "workers_asg_names"
+      - "workers_default_ami_id"
+      - "workers_asg_arns"
+      - "worker_iam_instance_profile_names"
+      - "workers_launch_template_arns"
+      - "workers_launch_template_ids"
+      - "workers_launch_template_latest_versions"
+      - "workers_user_data"
+dataops-staging:
+  module:
+    inputs:
+      worker_disk_size: 50
+      worker_ami_type: "AL2_x86_64"
+      enable_irsa: true
+      cluster_enabled_log_types: []
+      cluster_name: ""
+      #      map_roles: []
+      #      vpc_id: ""
+      #      subnets: []
+      #      bucket: ""
+      #      bucket_region: ""
+      #      dynamodb: ""
+      #      workspace: ""
+      tags: {}
+      node_groups: {
+        group1: {
+          desired_capacity: 3,
+          max_capacity: 10,
+          min_capacity: 1,
+          instance_type: "t2.medium",
+          ami_release_version: "1.14.9-20200228",
+          k8s_labels: {
+            Environment: "tst2"
+          }
+        },
+        group2: {
+          desired_capacity: 3,
+          max_capacity: 10,
+          min_capacity: 1,
+          instance_type: "t2.large",
+          ami_release_version: "1.14.9-20200228",
+          k8s_labels: {
+            Environment: "tst2"
+          }
+        }
+      }
+    outputs:
+      - "cluster_arn"
+      - "cluster_certificate_authority_data"
+      - "cluster_endpoint"
+      - "cluster_iam_role_arn"
+      - "cluster_iam_role_name"
+      - "cluster_id"
+      - "cluster_security_group_id"
+      - "cluster_version"
+      - "config_map_aws_auth"
+      - "kubeconfig"
+      - "kubeconfig_filename"
+      - "node_groups"
+      - "worker_iam_instance_profile_arns"
+      - "worker_iam_role_arn"
+      - "worker_iam_role_name"
+      - "worker_security_group_id"
+      - "workers_asg_names"
+      - "workers_default_ami_id"
+      - "workers_asg_arns"
+      - "worker_iam_instance_profile_names"
+      - "workers_launch_template_arns"
+      - "workers_launch_template_ids"
+      - "workers_launch_template_latest_versions"
+      - "workers_user_data"
+dataops-prod:
+  module:
+    inputs:
+      worker_disk_size: 50
+      worker_ami_type: "AL2_x86_64"
+      enable_irsa: true
+      cluster_enabled_log_types: []
+      cluster_name: ""
+      #      map_roles: []
+      #      vpc_id: ""
+      #      subnets: []
+      #      bucket: ""
+      #      bucket_region: ""
+      #      dynamodb: ""
+      #      workspace: ""
+      tags: {}
+      node_groups: {
+        group1: {
+          desired_capacity: 3,
+          max_capacity: 10,
+          min_capacity: 1,
+          instance_type: "t2.medium",
+          ami_release_version: "1.14.9-20200228",
+          k8s_labels: {
+            Environment: "tst2"
+          }
+        },
+        group2: {
+          desired_capacity: 3,
+          max_capacity: 10,
+          min_capacity: 1,
+          instance_type: "t2.large",
+          ami_release_version: "1.14.9-20200228",
+          k8s_labels: {
+            Environment: "tst2"
+          }
+        }
+      }
+    outputs:
+      - "cluster_arn"
+      - "cluster_certificate_authority_data"
+      - "cluster_endpoint"
+      - "cluster_iam_role_arn"
+      - "cluster_iam_role_name"
+      - "cluster_id"
+      - "cluster_security_group_id"
+      - "cluster_version"
+      - "config_map_aws_auth"
+      - "kubeconfig"
+      - "kubeconfig_filename"
+      - "node_groups"
+      - "worker_iam_instance_profile_arns"
+      - "worker_iam_role_arn"
+      - "worker_iam_role_name"
+      - "worker_security_group_id"
+      - "workers_asg_names"
+      - "workers_default_ami_id"
+      - "workers_asg_arns"
+      - "worker_iam_instance_profile_names"
+      - "workers_launch_template_arns"
+      - "workers_launch_template_ids"
+      - "workers_launch_template_latest_versions"
+      - "workers_user_data"
