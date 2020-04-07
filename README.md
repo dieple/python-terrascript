@@ -36,7 +36,7 @@ This repo has a few dependencies:
 - [Terraform 0.12](https://learn.hashicorp.com/terraform/getting-started/install.html)
 - [Cloud native toolkit](https://github.com/dieple/cloud-native-toolkit) - local development env for AWS assume role to build.
 - [terraform-framework](https://github.com/dieple/terraform-framework) - if you want to develop and deploy terraform manually
-- [python-terrascript](https://github.com/dieple/python-terrascript) - if you want to use python to generate terraform code.
+- [python-terrascript](https://github.com/mjuenema/python-terrascript) - if you want to use python to generate terraform code.
 
 
 ### Prerequisites
