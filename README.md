@@ -1,18 +1,11 @@
-# pyterramod
+# python-terrascript
 
 # Introduction
 Python Terrascript Terraform Module Generator:- This repo used Python code in conjunction with the 
  [python-terrascript](https://github.com/mjuenema/python-terrascript) package along with the 
 [terraform-framework](https://github.com/dieple/terraform-framework) to generate terraform code and apply terraform
- to build AWS resources against a target AWS account. We normally assume role into the "build account" to run pyterramod
-
-
-
-### Contents
-
-1. [Background](#Background)
-1. [Pre-requisites](#Prerequisites)
-1. [Use K9s To Explore Kubernetes](#Use-K9s-To-Explore-Kubernetes)
+ to build AWS resources against a target AWS account. We normally assume role into the "build account" to run python-terrascript. 
+ All the S3 state files are saved locally within the build account and there is no need to store the state file on the destination account.
 
 
 ## Scope
@@ -20,30 +13,33 @@ Python Terrascript Terraform Module Generator:- This repo used Python code in co
 This document describes how to use this tool to build AWS resources, such as 
 * VPC 
 * IAMs
-* Security Groups
 * Lambda functions
 * Codebuild/Pipeline
 * EKS
+* Dynamodb
 * and so on.  
 
-This tool can be built on any accounts/environments in DRY code concept.
+This tool can be built on any accounts/environments in a DRY code concept.
+
 
 ## Background
 
 #### Reference Repos
 
-1. https://github.com/dieple/cloud-native-toolkit.git <<< builder tools
-1. https://github.com/dieple/terraform-framework.git <<< terraform repo
+1. https://github.com/dieple/cloud-native-toolkit.git <<< builder tools - docker image for local development environment
+1. https://github.com/dieple/terraform-framework.git <<< terraform repo - contains generic terraform modules to be invoked by python-terrascript
 
-
-### Prerequisites
 
 This repo has a few dependencies:
 
+- [docker](https://www.docker.com/products/docker-desktop)
 - [Terraform 0.12](https://learn.hashicorp.com/terraform/getting-started/install.html)
-- [Cloud native toolkit](https://github.com/dieple/cloud-native-toolkit) - local development env for AWs assume role to build.
+- [Cloud native toolkit](https://github.com/dieple/cloud-native-toolkit) - local development env for AWS assume role to build.
 - [terraform-framework](https://github.com/dieple/terraform-framework) - if you want to develop and deploy terraform manually
-- [pyterramod](https://github.com/dieple/pyterramod) - if you want to use python to generate terraform code.
+- [python-terrascript](https://github.com/dieple/python-terrascript) - if you want to use python to generate terraform code.
+
+
+### Prerequisites
 - Setup AWS credentials:
 ```bash
 $ #Modify AWs account to your env
@@ -64,7 +60,7 @@ $ cat $HOME/.aws/config
 [default]
 region = eu-west-1
 output = json
-mfa_serial=arm:aws:iam::<your-mfa-aws-account-id>:user/<your-email>
+mfa_serial=<your-organisation-mfa-serial-arn>
 ```
 
 ```bash
@@ -73,12 +69,11 @@ $ cat $HOME/.aws/credentials
 aws_access_key_id = <your-aws-access-key-id>
 aws_secret_access_key = <your-aws-secret-access-key>
 ```
-#### General 
 
-1. mkdir -p $HOME/{repos,.aws,.kube, .ssh, .terraform.d/plugin-cache} on your host machine
-1. cd $HOME/repos
-1. git clone https://github.com/dieple/cloud-native-toolkit toolkit
-1. git clone https://github.com/dieple/pyterramod.git
+- mkdir -p $HOME/{repos,.aws,.kube, .ssh, .terraform.d/plugin-cache} on your host machine
+- cd $HOME/repos
+- git clone https://github.com/dieple/cloud-native-toolkit toolkit
+- git clone https://github.com/dieple/python-terrascript.git terrascript
 
 #### Toolkit
 
@@ -98,6 +93,8 @@ $ ./run_toolkit.sh -v 0.0.6
 $ # then assume role 
 $ #eval $(assume-role <account-alias-as-defined-in-$HOME/.aws/account> <role-name> <mfa-code>)
 $ eval $(assume-role dataops-dev administrator 123456)
+$ cd terrascript 
+$ # read the README file how to start python-terrascript development and building AWS resources
 ```
 
 This puts you inside the Docker image  ready for local development env.
