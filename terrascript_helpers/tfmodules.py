@@ -8,7 +8,7 @@ try:
 except ImportError:
     from scandir import scandir, walk
 
-from tfprompts import *
+from tfprompts import prompt_user
 
 
 

@@ -1,7 +1,7 @@
 import boto3
 
-from pprint import *
-from utils import *
+# from pprint import pprint
+# from .utils import *
 
 
 def get_vpc_id(region, tag_filter):

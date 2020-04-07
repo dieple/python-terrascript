@@ -46,11 +46,3 @@ cloudops-prod:
   delimiter: "-"
   cost_centre: "pe"
   tags: {}
-tvx-plfm-tst2:
-  customer: "tvx"
-  product: "plfm"
-  environment: "tst2"
-  attributes: []
-  delimiter: "-"
-  cost_centre: "platform-engineering"
-  tags: {}

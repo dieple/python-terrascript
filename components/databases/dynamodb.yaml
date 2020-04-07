@@ -88,18 +88,3 @@ cloudops_dev:
       tags: {}
     outputs:
       - "table_name"
-tvx-plfm-tst2:
-  module:
-    inputs:
-      name: ""
-      hash_key: "Path"
-      range_key: "Key"
-      enable_autoscaler: false
-      dynamodb_attributes: []
-      local_secondary_index_map: []
-      global_secondary_index_map: []
-      autoscale_min_read_capacity: 1
-      autoscale_min_write_capacity: 1
-      tags: {}
-    outputs:
-      - "table_name"

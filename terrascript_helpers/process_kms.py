@@ -1,4 +1,4 @@
-from kms_policy_document import *
+from kms_policy import kms_policy_document
 
 
 # setup some dynamic required fields

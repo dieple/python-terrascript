@@ -1,7 +1,7 @@
-platform_testing:
+platform-testing:
   module:
     inputs:
-      allowed_account_ids: ["744482186728", "107226666137", "072979390894"]
+      allowed_account_ids: ["111111111111", "222222222222", "333333333333"]
       repository_names: ["umsl"]
       allow_push: "true"
       repo_lifecycle_info: {}
@@ -10,10 +10,10 @@ platform_testing:
       - "registry_ids"
       - "repository_urls"
       - "repository_names"
-platform_staging:
+platform-staging:
   module:
     inputs:
-      allowed_account_ids: ["402191394274", "944139678522", "626097613490"]
+      allowed_account_ids: ["111111111111", "222222222222", "333333333333"]
       repository_names: ["eks-poc"]
       allow_push: "true"
       repo_lifecycle_info: {}
@@ -22,10 +22,10 @@ platform_staging:
       - "registry_ids"
       - "repository_urls"
       - "repository_names"
-dataops_staging:
+dataops-staging:
   module:
     inputs:
-      allowed_account_ids: ["190033888840", "645025723021", "665109639135"]
+      allowed_account_ids: ["111111111111", "222222222222", "333333333333"]
       repository_names: ["misc-bi-airflow/airflow-core", "misc-bi-airflow/airflow-dataops", "misc-bi-airflow/dag-code",
                          "misc-bi-airflow/airflow-eks", "misc-bi-airflow/sqlcl"]
       allow_push: "true"
@@ -38,21 +38,9 @@ dataops_staging:
 dataops-dev:
   module:
     inputs:
-      allowed_account_ids: ["190033888840", "645025723021", "665109639135"]
+      allowed_account_ids: ["111111111111", "222222222222", "333333333333"]
       repository_names: ["misc-bi-airflow/airflow-core", "misc-bi-airflow/airflow-dataops", "misc-bi-airflow/dag-code",
                          "misc-bi-airflow/airflow-eks", "misc-bi-airflow/sqlcl"]
-      allow_push: "true"
-      repo_lifecycle_info: {}
-      tags: {}
-    outputs:
-      - "registry_ids"
-      - "repository_urls"
-      - "repository_names"
-tvx-plfm-tst2:
-  module:
-    inputs:
-      allowed_account_ids: ["860956293230"]
-      repository_names: ["tst2/core", "tst2/dataops", "tst2/code", "tst2/eks"]
       allow_push: "true"
       repo_lifecycle_info: {}
       tags: {}

@@ -1,8 +1,10 @@
 import os
 import terrascript
+import json
 
-from utils import *
-from setup_input_kwargs import *
+from utils import get_yaml_input, generate_terraform_backend_provider_and_label
+from setup_input_kwargs import setup_input_kwargs
+from tfprompts import user_confirmation
 
 def tf_generate_and_run(build_data):
     """
@@ -35,15 +37,13 @@ def generate_module(module_name, build_data):
 
     global_data, src_data, labels_data, mod_data = get_yaml_input(module_name, build_data)
 
-    if module_name == "s3-tfstate-backend":
+    if module_name == "s3_tfstate_backend":
         ts, label, label_kwargs = generate_terraform_backend_provider_and_label(module_name, build_data, ts, add_backend=False)
     else:
         ts, label, label_kwargs = generate_terraform_backend_provider_and_label(module_name, build_data, ts)
 
     # setup key words arguments input parameters...
     input_kwargs = setup_input_kwargs(module_name, build_data, src_data, mod_data, ts)
-
-    # ts = ts + ts_setup
 
     # generate terraform codes to invoke opensource/in-house terraform modules
     ts += terrascript.Module(_name=module_name, **input_kwargs)
@@ -100,7 +100,7 @@ def run_module(module_name, build_data):
         # always auto approve 'plan' action
         os.system(tf_plan_destroy_cmd)
     elif build_data["tfaction"] == 'apply':
-        if build_data["approve"]:
+        if build_data["auto_approve"]:
             # auto-approve flag enabled so skip user confirmation
             os.system(tf_plan_cmd)
             os.system(tf_apply_cmd)
@@ -112,7 +112,7 @@ def run_module(module_name, build_data):
             else:
                 print("User aborting...")
     elif build_data["tfaction"] == 'apply-destroy':
-        if build_data.approve:
+        if build_data["auto_approve"]:
             os.system(tf_plan_cmd)
             os.system(tf_apply_cmd)
         else:

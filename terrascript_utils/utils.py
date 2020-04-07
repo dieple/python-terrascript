@@ -3,7 +3,6 @@ import terrascript
 import terrascript.provider
 
 from ruamel.yaml import YAML
-from s3_data import *
 
 def get_value(listOfDicts, key):
   for subVal in listOfDicts:

@@ -2,7 +2,7 @@ import terrascript
 import terrascript.data
 import terrascript.provider
 
-from utils import *
+from utils import is_empty
 
 
 # setup some dynamic required fields
@@ -20,13 +20,13 @@ def process_bastion(input_kwargs, build_data, ts):
 
   # ssh key pair remote data:
   ts += terrascript.data.terraform_remote_state(
-                            "ssh",
+                            "ssh_key_pair",
                             backend="s3",
                             config={"bucket": build_data["bucket"], "key": ssh_key, "region": build_data["bucket_region"], "dynamodb_table": build_data["dynamodb"]}
                             )
 
   input_kwargs["tags"] = "${module.label.tags}"
-  input_kwargs["key_name"] = "${data.terraform_remote_state.ssh.outputs.key_name}"
+  input_kwargs["key_name"] = "${data.terraform_remote_state.ssh_key_pair.outputs.key_name}"
   input_kwargs["vpc_id"] = "${data.terraform_remote_state.vpc.outputs.vpc_id}"
   input_kwargs["public_subnets"] = "${data.terraform_remote_state.vpc.outputs.public_subnets}"
   input_kwargs["environment"] = build_data["environment"]

@@ -1,3 +1,4 @@
+from utils import is_empty
 
 # setup some dynamic required fields
 def process_eks(input_kwargs, build_data):
