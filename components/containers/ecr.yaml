@@ -1,0 +1,62 @@
+platform_testing:
+  module:
+    inputs:
+      allowed_account_ids: ["744482186728", "107226666137", "072979390894"]
+      repository_names: ["umsl"]
+      allow_push: "true"
+      repo_lifecycle_info: {}
+      tags: {}
+    outputs:
+      - "registry_ids"
+      - "repository_urls"
+      - "repository_names"
+platform_staging:
+  module:
+    inputs:
+      allowed_account_ids: ["402191394274", "944139678522", "626097613490"]
+      repository_names: ["eks-poc"]
+      allow_push: "true"
+      repo_lifecycle_info: {}
+      tags: {}
+    outputs:
+      - "registry_ids"
+      - "repository_urls"
+      - "repository_names"
+dataops_staging:
+  module:
+    inputs:
+      allowed_account_ids: ["190033888840", "645025723021", "665109639135"]
+      repository_names: ["misc-bi-airflow/airflow-core", "misc-bi-airflow/airflow-dataops", "misc-bi-airflow/dag-code",
+                         "misc-bi-airflow/airflow-eks", "misc-bi-airflow/sqlcl"]
+      allow_push: "true"
+      repo_lifecycle_info: {}
+      tags: {}
+    outputs:
+      - "registry_ids"
+      - "repository_urls"
+      - "repository_names"
+dataops-dev:
+  module:
+    inputs:
+      allowed_account_ids: ["190033888840", "645025723021", "665109639135"]
+      repository_names: ["misc-bi-airflow/airflow-core", "misc-bi-airflow/airflow-dataops", "misc-bi-airflow/dag-code",
+                         "misc-bi-airflow/airflow-eks", "misc-bi-airflow/sqlcl"]
+      allow_push: "true"
+      repo_lifecycle_info: {}
+      tags: {}
+    outputs:
+      - "registry_ids"
+      - "repository_urls"
+      - "repository_names"
+tvx-plfm-tst2:
+  module:
+    inputs:
+      allowed_account_ids: ["860956293230"]
+      repository_names: ["tst2/core", "tst2/dataops", "tst2/code", "tst2/eks"]
+      allow_push: "true"
+      repo_lifecycle_info: {}
+      tags: {}
+    outputs:
+      - "registry_ids"
+      - "repository_urls"
+      - "repository_names"

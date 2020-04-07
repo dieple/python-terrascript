@@ -1,0 +1,97 @@
+dataops_dev:
+  module:
+    inputs:
+      application_failure_feedback_role_arn: ""
+      application_success_feedback_role_arn: ""
+#      application_success_feedback_sample_rate: ""
+      create_sns_topic: true
+      delivery_policy: ""
+      display_name: ""
+      http_failure_feedback_role_arn: ""
+      http_success_feedback_role_arn: ""
+#      http_success_feedback_sample_rate: ""
+      kms_master_key_id: ""
+      lambda_failure_feedback_role_arn: ""
+      lambda_success_feedback_role_arn: ""
+#      lambda_success_feedback_sample_rate: ""
+      name: ""
+      policy: ""
+      sqs_failure_feedback_role_arn: ""
+      sqs_success_feedback_role_arn: ""
+#      sqs_success_feedback_sample_rate: ""
+      tags: {}
+    outputs:
+      - "this_sns_topic_arn"
+dataops_staging:
+  module:
+    inputs:
+      application_failure_feedback_role_arn: ""
+      application_success_feedback_role_arn: ""
+#      application_success_feedback_sample_rate: ""
+      create_sns_topic: true
+      delivery_policy: ""
+      display_name: ""
+      http_failure_feedback_role_arn: ""
+      http_success_feedback_role_arn: ""
+#      http_success_feedback_sample_rate: ""
+      kms_master_key_id: ""
+      lambda_failure_feedback_role_arn: ""
+      lambda_success_feedback_role_arn: ""
+#      lambda_success_feedback_sample_rate: ""
+      name: ""
+      policy: ""
+      sqs_failure_feedback_role_arn: ""
+      sqs_success_feedback_role_arn: ""
+#      sqs_success_feedback_sample_rate: ""
+      tags: {}
+    outputs:
+      - "this_sns_topic_arn"
+dataops_prod:
+  module:
+    inputs:
+      application_failure_feedback_role_arn: ""
+      application_success_feedback_role_arn: ""
+#      application_success_feedback_sample_rate: ""
+      create_sns_topic: true
+      delivery_policy: ""
+      display_name: ""
+      http_failure_feedback_role_arn: ""
+      http_success_feedback_role_arn: ""
+#      http_success_feedback_sample_rate: ""
+      kms_master_key_id: ""
+      lambda_failure_feedback_role_arn: ""
+      lambda_success_feedback_role_arn: ""
+#      lambda_success_feedback_sample_rate: ""
+      name: ""
+      policy: ""
+      sqs_failure_feedback_role_arn: ""
+      sqs_success_feedback_role_arn: ""
+#      sqs_success_feedback_sample_rate: ""
+      tags: {}
+    outputs:
+      - "this_sns_topic_arn"
+tvx-plfm-tst2:
+  module:
+    inputs:
+      application_failure_feedback_role_arn: ""
+#      application_success_feedback_role_arn: ""
+#      application_success_feedback_sample_rate: ""
+      create_sns_topic: true
+      delivery_policy: ""
+      display_name: ""
+      http_failure_feedback_role_arn: ""
+      http_success_feedback_role_arn: ""
+#      http_success_feedback_sample_rate: ""
+      kms_master_key_id: ""
+      lambda_failure_feedback_role_arn: ""
+      lambda_success_feedback_role_arn: ""
+#      lambda_success_feedback_sample_rate: ""
+      name: ""
+      policy: ""
+#      sqs_failure_feedback_role_arn: ""
+      sqs_success_feedback_role_arn: ""
+#      sqs_success_feedback_sample_rate: ""
+      tags: {}
+    outputs:
+      - "this_sns_topic_arn"
+

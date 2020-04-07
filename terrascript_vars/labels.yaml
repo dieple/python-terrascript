@@ -1,0 +1,56 @@
+dataops-dev:
+  customer: "data"
+  product: "ops"
+  environment: "dev"
+  attributes: []
+  delimiter: "-"
+  cost_centre: "pe"
+  tags: {}
+dataops-staging:
+  customer: "data"
+  product: "ops"
+  environment: "staging"
+  attributes: []
+  delimiter: "-"
+  cost_centre: "pe"
+  tags: {}
+dataops-prod:
+  customer: "data"
+  product: "ops"
+  environment: "prod"
+  attributes: []
+  delimiter: "-"
+  cost_centre: "pe"
+  tags: {}
+cloudops-dev:
+  customer: "cloud"
+  product: "ops"
+  environment: "dev"
+  attributes: []
+  delimiter: "-"
+  cost_centre: "pe"
+  tags: {}
+cloudops-staging:
+  customer: "cloud"
+  product: "ops"
+  environment: "staging"
+  attributes: []
+  delimiter: "-"
+  cost_centre: "pe"
+  tags: {}
+cloudops-prod:
+  customer: "cloud"
+  product: "ops"
+  environment: "prod"
+  attributes: []
+  delimiter: "-"
+  cost_centre: "pe"
+  tags: {}
+tvx-plfm-tst2:
+  customer: "tvx"
+  product: "plfm"
+  environment: "tst2"
+  attributes: []
+  delimiter: "-"
+  cost_centre: "platform-engineering"
+  tags: {}

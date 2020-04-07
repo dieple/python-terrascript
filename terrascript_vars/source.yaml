@@ -1,0 +1,48 @@
+dataops-dev:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+dataops-staging:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+dataops-prod:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+cloudops-dev:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+cloudops-staging:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+cloudops-prod:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+platform-dev:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+platform-staging:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+platform-prod:
+  s3_tfstate_backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+tvx-plfm-tst2:
+  s3-tfstate-backend: "git::https://github.com/dieple/terraform-framework.git//modules/initial/s3-tfstate-backend?ref=tags/v0.0.1"
+  vpc: "git::https://github.com/dieple/terraform-framework.git//modules/networkings/vpc?ref=tags/v0.0.1"
+  label: "git::https://github.com/dieple/terraform-framework.git//modules/core/tagging?ref=tags/v0.0.1"
+  kms: "git::https://github.com/dieple/terraform-framework.git//modules/management/kms?ref=tags/v0.0.1"
+  ssh-key-pair: "git::https://github.com/dieple/terraform-framework.git//modules/management/ssh-key-pair?ref=tags/v0.0.2"
+  bastion: "git::https://github.com/dieple/terraform-framework.git//modules/core/bastion?ref=tags/v0.0.1"
+  ecr: "git::https://github.com/dieple/terraform-framework.git//modules/containers/ecr-repositories?ref=tags/v0.0.1"
+  sqs: "git::https://github.com/terraform-aws-modules/terraform-aws-sqs.git?ref=tags/v2.0.0"
+  sns: "git::https://github.com/terraform-aws-modules/terraform-aws-sns.git?ref=tags/v2.1.0"
+  codepipeline-s3-bucket: "git::https://github.com/dieple/terraform-framework.git//modules/storage/s3-bucket?ref=tags/v0.0.4"
+  rds-cluster-aurora: "git::https://github.com/terraform-aws-modules/terraform-aws-rds-aurora.git?ref=tags/v2.15.0"

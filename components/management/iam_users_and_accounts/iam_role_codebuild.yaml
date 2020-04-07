@@ -1,0 +1,91 @@
+platform-testing:
+  module:
+    inputs:
+      role_name: "iam-role-codebuild"
+      principals:
+        Service: ["codebuild.amazonaws.com", "codepipeline.amazonaws.com"]
+      role_description: "codebuild iam role"
+      policy_description: "Policy for the code build iam role"
+      policy_documents: []
+      additional_policy_arns: []
+      create_ec2_profile: false
+      max_session_duration: 3600
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+dataops-dev:
+  module:
+    inputs:
+      role_name: "iam-role-codebuild"
+      principals:
+        Service: ["codebuild.amazonaws.com", "codepipeline.amazonaws.com"]
+      role_description: "codebuild iam role"
+      policy_description: "Policy for the code build iam role"
+      policy_documents: []
+      additional_policy_arns: []
+      create_ec2_profile: false
+      max_session_duration: 3600
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+dataops-staging:
+  module:
+    inputs:
+      role_name: "iam-role-codebuild"
+      principals:
+        Service: ["codebuild.amazonaws.com"]
+      role_description: "codebuild iam role"
+      policy_description: "Policy for the code build iam role"
+      policy_documents: []
+      additional_policy_arns: []
+      create_ec2_profile: false
+      max_session_duration: 3600
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+dataops-prod:
+  module:
+    inputs:
+      role_name: "iam-role-codebuild"
+      principals:
+        Service: ["codebuild.amazonaws.com", "codepipeline.amazonaws.com"]
+      role_description: "codebuild iam role"
+      policy_description: "Policy for the code build iam role"
+      policy_documents: []
+      additional_policy_arns: []
+      create_ec2_profile: false
+      max_session_duration: 3600
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+tvx-plfm-tst2:
+  module:
+    inputs:
+      role_name: "iam-role-codebuild"
+      principals:
+        Service: ["codebuild.amazonaws.com", "codepipeline.amazonaws.com"]
+      role_description: "codebuild iam role"
+      policy_description: "Policy for the code build iam role"
+      policy_documents: []
+      additional_policy_arns: []
+      create_ec2_profile: false
+      max_session_duration: 3600
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+

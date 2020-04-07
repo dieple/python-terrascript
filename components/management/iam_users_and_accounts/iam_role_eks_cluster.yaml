@@ -1,0 +1,106 @@
+platform-testing:
+  module:
+    inputs:
+      role_name: "iam-role-eks-cluster"
+      principals:
+        Service: ["eks.amazonaws.com"]
+      role_description: "EKS cluster role"
+      policy_description: "Policy for the EKS cluster role"
+      create_ec2_profile: false
+      max_session_duration: 3600
+      actions_deny: []
+      addtional_policy_arns:
+        - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+        - "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+      policy_documents: []
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+dataops-dev:
+  module:
+    inputs:
+      role_name: "iam-role-eks-cluster"
+      principals:
+        Service: ["eks.amazonaws.com"]
+      role_description: "EKS cluster role"
+      policy_description: "Policy for the EKS cluster role"
+      create_ec2_profile: false
+      max_session_duration: 3600
+      actions_deny: []
+      addtional_policy_arns:
+        - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+        - "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+      policy_documents: []
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+dataops-staging:
+  module:
+    inputs:
+      role_name: "iam-role-eks-cluster"
+      principals:
+        Service: ["eks.amazonaws.com"]
+      role_description: "EKS cluster role"
+      policy_description: "Policy for the EKS cluster role"
+      create_ec2_profile: false
+      max_session_duration: 3600
+      actions_deny: []
+      addtional_policy_arns:
+        - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+        - "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+      policy_documents: []
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+dataops-prod:
+  module:
+    inputs:
+      role_name: "iam-role-eks-cluster"
+      principals:
+        Service: ["eks.amazonaws.com"]
+      role_description: "EKS cluster role"
+      policy_description: "Policy for the EKS cluster role"
+      create_ec2_profile: false
+      max_session_duration: 3600
+      actions_deny: []
+      addtional_policy_arns:
+        - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+        - "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+      policy_documents: []
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+tvx-plfm-tst2:
+  module:
+    inputs:
+      role_name: "iam-role-eks-cluster"
+      principals:
+        Service: ["eks.amazonaws.com"]
+      role_description: "EKS cluster role"
+      policy_description: "Policy for the EKS cluster role"
+      create_ec2_profile: false
+      max_session_duration: 3600
+      actions_deny: []
+      addtional_policy_arns:
+        - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+        - "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+      policy_documents: []
+      tags: {}
+    outputs:
+      - "name"
+      - "arn"
+      - "id"
+      - "policy"
+

@@ -1,0 +1,75 @@
+platform-testing:
+  module:
+    inputs:
+      role_name: ""
+      policy_description: "Allow EKS Worker nodes to access EFS actions"
+      principals_services_arns: ["ec2.amazonaws.com"]
+      role_description: "EFS provisioner role for pods to access EFS"
+      eks_worker_role_name: ""
+      additional_policy_arns: []
+      tags: {}
+    outputs:
+      - "arn"
+      - "id"
+      - "name"
+      - "policy"
+dataops-dev:
+  module:
+    inputs:
+      policy_description: "Allow EKS Worker nodes to access EFS actions"
+      principals_services_arns: ["ec2.amazonaws.com"]
+      role_description: "EFS provisioner role for pods to access EFS"
+      eks_worker_role_name: ""
+      role_name: ""
+      additional_policy_arns: []
+      tags: {}
+    outputs:
+      - "arn"
+      - "id"
+      - "name"
+      - "policy"
+dataops-staging:
+  module:
+    inputs:
+      policy_description: "Allow EKS Worker nodes to access EFS actions"
+      principals_services_arns: ["ec2.amazonaws.com"]
+      role_description: "EFS provisioner role for pods to access EFS"
+      eks_worker_role_name: ""
+      role_name: ""
+      additional_policy_arns: []
+      tags: {}
+    outputs:
+      - "arn"
+      - "id"
+      - "name"
+      - "policy"
+dataops-prod:
+  module:
+    inputs:
+      policy_description: "Allow EKS Worker nodes to access EFS actions"
+      principals_services_arns: ["ec2.amazonaws.com"]
+      role_description: "EFS provisioner role for pods to access EFS"
+      eks_worker_role_name: ""
+      role_name: ""
+      additional_policy_arns: []
+      tags: {}
+    outputs:
+      - "arn"
+      - "id"
+      - "name"
+      - "policy"
+tvx-plfm-tst2:
+  module:
+    inputs:
+      policy_description: "Allow EKS Worker nodes to access EFS actions"
+      principals_services_arns: ["ec2.amazonaws.com"]
+      role_description: "EFS provisioner role for pods to access EFS"
+      eks_worker_role_name: ""
+      role_name: ""
+      additional_policy_arns: []
+      tags: {}
+    outputs:
+      - "arn"
+      - "id"
+      - "name"
+      - "policy"
