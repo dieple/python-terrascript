@@ -40,7 +40,7 @@ dataops-staging:
       aws_account_id: ""
       aws_region: ""
       artifact_store_bucket_name: ""
-      kms_key_arn: "arn:aws:kms:eu-west-1:561276803310:key/aa95c97b-074d-4c38-82bc-48c2abcbef7a"
+      kms_key_arn: "arn:aws:kms:eu-west-1:111111111111:key/aa95c97b-074d-4c38-82bc-48c2abcbef7a"
       tags: {}
     outputs:
       - "badge_url"
@@ -84,7 +84,7 @@ dataops-dev:
       aws_account_id: ""
       aws_region: ""
       artifact_store_bucket_name: ""
-      kms_key_arn: "arn:aws:kms:eu-west-1:561276803310:key/aa95c97b-074d-4c38-82bc-48c2abcbef7a"
+      kms_key_arn: "arn:aws:kms:eu-west-1:222222222222:key/aa95c97b-074d-4c38-82bc-48c2abcbef7a"
       tags: {}
     outputs:
       - "badge_url"
